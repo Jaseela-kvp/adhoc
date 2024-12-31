@@ -27,13 +27,13 @@
     });
     // icons click
 // Back to top button
-$(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-        $('.back-to-top').fadeIn('slow');
-    } else {
-        $('.back-to-top').fadeOut('slow');
-    }
-});
+// $(window).scroll(function () {
+//     if ($(this).scrollTop() > 300) {
+//         $('.back-to-top').fadeIn('slow');
+//     } else {
+//         $('.back-to-top').fadeOut('slow');
+//     }
+// });
 
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
 
 // gallery
 

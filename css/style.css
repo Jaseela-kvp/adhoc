@@ -21,27 +21,7 @@
     font-weight: 900 !important;
 }
 
-.wasp,
-.call,
-.email-class {
-    position: fixed;
-    right: 20px;
-    z-index: 99;
-}
 
-
-
-.wasp {
-    bottom: 45px;
-}
-
-.call {
-    bottom: 95px;
-}
-
-.email-class {
-    bottom: 45px;
-}
 
 /* link_custom */
 a.link_custom{
@@ -111,12 +91,12 @@ a.link_custom:hover{
     height: 100px
 }
 .logo{
-    max-width: 350px;
+    max-width: 300px;
     max-height: 70px;
   }
 @media (max-width: 450px){
     .logo{
-        max-width: 230px;
+        max-width: 2000px;
         max-height: 100px;
       }
 }
@@ -623,7 +603,29 @@ a.link_custom:hover{
 }
 /* hot gallery ends */
 
+/* email wasp call */
+.wasp,
+.call,
+.email-class {
+    position: fixed;
+    right: 50px;
+    z-index: 99;
+}
 
+
+
+.wasp {
+    bottom: 45px;
+}
+
+.call {
+    bottom: 95px;
+}
+
+.email-class {
+    bottom: 45px;
+}
+/* email wasp call ends */
 
 
 
