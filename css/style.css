@@ -251,7 +251,7 @@ a.link_custom:hover{
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
-        height: auto;
+        height:100vh;
         object-fit: cover;
     }
 
