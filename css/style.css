@@ -618,11 +618,13 @@ a.link_custom:hover{
     display: grid;
     gap: 1rem; 
     padding: 2rem;
-    background-image: url('../img/img-5.png');
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Semi-transparent overlay */
+        url('../img/box3_bg.webp'); /* Background image */
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
-  }
+}
   
   /* Box Styling */
   .box {
@@ -669,6 +671,96 @@ a.link_custom:hover{
       grid-template-columns: 1fr; 
     }
   }
+
+  /* trials */
+  .container_box1 {
+    display: grid;
+    gap: 1rem; 
+    padding: 2rem;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Semi-transparent overlay */
+        url('../img/box_bg.jpeg'); /* Background image */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+  .container_box2 {
+    display: grid;
+    gap: 1rem; 
+    padding: 2rem;
+    background: 
+       /* Semi-transparent overlay */
+        url('../img/box_bg.jpeg'); /* Background image */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+  .container_box3 {
+    display: grid;
+    gap: 1rem; 
+    padding: 2rem;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Semi-transparent overlay */
+        url('../img/box2_bg.jpeg'); /* Background image */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+  .container_box4 {
+    display: grid;
+    gap: 1rem; 
+    padding: 2rem;
+    background: 
+       /* Semi-transparent overlay */
+        url('../img/box2_bg.jpeg'); /* Background image */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+  .container_box5 {
+    display: grid;
+    gap: 1rem; 
+    padding: 2rem;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Semi-transparent overlay */
+        url('../img/box4_bg.jpeg'); /* Background image */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+  .container_box6 {
+    display: grid;
+    gap: 1rem; 
+    padding: 2rem;
+    background: 
+   
+        url('../img/box4_bg.jpeg'); /* Background image */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+  .container_box7 {
+    display: grid;
+    gap: 1rem; 
+    padding: 2rem;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Semi-transparent overlay */
+        url('../img/hero10.png'); /* Background image */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+  .container_box8 {
+    display: grid;
+    gap: 1rem; 
+    padding: 2rem;
+    background: 
+    
+        url('../img/hero10.png'); /* Background image */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
   /* ends */
 
 /*** Service ***/
