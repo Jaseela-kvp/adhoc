@@ -1,0 +1,109 @@
+/*--------------------------------------------------------------
+# table styling
+--------------------------------------------------------------*/
+/* Ensure only this table has horizontal scroll on mobile */
+.table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+  
+  .table-container table {
+    border-collapse: collapse;
+    width: 100%; /* Optional, adjust to your layout */
+  }
+  
+  .table-container th,
+  .table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table-container th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Ensure the scroll only applies on small screens */
+  @media screen and (max-width: 768px) {
+    .table-container {
+      overflow-x: scroll;
+    }
+  }
+  
+  /* table 2 */
+  /* Ensure only the second table has horizontal scroll on mobile */
+  .table-container-2 {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    margin: 0 auto; /* Optional: Center the table horizontally */
+  }
+  
+  .table-container-2 table {
+    border-collapse: collapse;
+    width: 100%; /* Ensures the table stretches to fit the container */
+  }
+  
+  .table-container-2 th,
+  .table-container-2 td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap; /* Prevents text wrapping for better horizontal scrolling */
+  }
+  
+  .table-container-2 th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  /* Add horizontal scrolling only on small screens */
+  @media screen and (max-width: 768px) {
+    .table-container-2 {
+      overflow-x: auto; /* Enables horizontal scroll */
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+    }
+  
+    .table-container-2 table {
+      min-width: 600px; /* Optional: Prevent table from shrinking too much */
+    }
+  }
+  /* table3 */
+  /* Ensure only the third table has horizontal scroll on mobile */
+  .table-container-3 {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    margin: 0 auto; /* Optional: Center the table horizontally */
+  }
+  
+  .table-container-3 table {
+    border-collapse: collapse;
+    width: 100%; /* Ensures the table stretches to fit the container */
+  }
+  
+  .table-container-3 th,
+  .table-container-3 td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap; /* Prevents text wrapping for better horizontal scrolling */
+  }
+  
+  .table-container-3 th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  /* Add horizontal scrolling only on small screens */
+  @media screen and (max-width: 768px) {
+    .table-container-3 {
+      overflow-x: auto; /* Enables horizontal scroll */
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+    }
+  
+    .table-container-3 table {
+      min-width: 600px; /* Optional: Prevent table from shrinking too much */
+    }
+  }
+  /*--------------------------------------------------------------
+  # ends
+  --------------------------------------------------------------*/
