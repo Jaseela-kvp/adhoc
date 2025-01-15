@@ -1,4 +1,6 @@
 /********** Template CSS **********/
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
     --primary: #681b1b;
     --light: #F5F5F5;
@@ -12,6 +14,7 @@
 body {
     overflow-x: hidden;
     width: 100%;
+    font-family: roboto;
   }
 
   @media (max-width: 768px) {
@@ -841,16 +844,20 @@ a.link_custom:hover{
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
+
 /*--------------------------------------------------------------
 # ends
 --------------------------------------------------------------*/
+
+
 
 /*--------------------------------------------------------------
 # footer starts
 --------------------------------------------------------------*/
 .footer {
-    background: linear-gradient(rgba(53, 53, 53, .7), rgba(53, 53, 53, .7)), url(../img/footer.jpg) center center no-repeat;
-    background-size: cover;
+  background: linear-gradient(rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.8)), url(../img/contact-bg.jpg) center center no-repeat;
+  background-size: cover;  
+  position: relative;
 }
 
 .footer .btn.btn-social {
@@ -910,7 +917,29 @@ a.link_custom:hover{
 .footer .copyright a:hover {
     color: var(--primary);
 }
+.map {
+  position: relative;
+  width: 100%;
+  padding-top: 70%;
+}
 
+.map iframe {
+  position: absolute;
+  top: 30px;
+  left: 35px;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .map iframe {
+      position: absolute;
+      top: 30px;
+      left:0px;
+      width: 100%;
+      height: 100%;
+    }
+}
 /*--------------------------------------------------------------
 # ends
 --------------------------------------------------------------*/
@@ -929,35 +958,50 @@ a.link_custom:hover{
 /*--------------------------------------------------------------
 # social media icon
 --------------------------------------------------------------*/
-.wasp,
-.call,
-.email-class {
-    position: fixed;
-    right: 30px;
-    z-index: 99;
-    max-width: 100%; /* Ensures the elements don’t overflow the screen */
+/* Contact Box Wrapper */
+.contact-box {
+  position: fixed;
+  right: 0; /* Align to the right wall */
+  top: 50%; /* Vertically centered */
+  transform: translateY(-50%); /* Adjust position to keep the center */
+  z-index: 99;
+  display: flex;
+  flex-direction: column; /* Stack the buttons vertically */
+  gap: 10px; /* Space between buttons */
 }
 
-.wasp {
-    bottom: 145px;
+/* Individual Contact Items */
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Square buttons */
+  height: 50px;
+  border-radius: 0; /* Box shape */
+  background-color: #681b1b; /* Change to your preferred color */
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-.call {
-    bottom: 95px;
+/* Hover Effect */
+.contact-item:hover {
+  background-color: #9e4242; /* Change background on hover */
+  color: #fff;
+  transform: translateX(-2px); /* Slide slightly on hover */
 }
 
-.email-class {
-    bottom: 45px;
-}
-
-/* Prevent horizontal overflow on smaller screens */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .wasp,
-    .call,
-    .email-class {
-        right: 10px; /* Reduce the right offset for smaller screens */
-    }
+  .contact-box {
+      right: 5px; /* Adjust for smaller screens */
+  }
+  .contact-item {
+      width: 40px;
+      height: 40px;
+  }
 }
+
 
 /*--------------------------------------------------------------
 # ends
