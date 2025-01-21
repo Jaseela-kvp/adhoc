@@ -30,6 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
 
      <!-- AOS CSS -->
      <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -47,26 +48,54 @@
     </div>
     <!-- Spinner End -->
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="img/logo/Logo_color.png" class="logo" alt="Ahmed Ghanim logo">
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav m-5 p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="services.html" class="nav-item nav-link">Services</a>
-                <a href="amc.html" class="nav-item nav-link">AMC</a>
-                <a href="career.html" class="nav-item nav-link">Careers</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div> 
-        </div>
-    </nav>
+  
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg fixed-top scrolling-navbar p-0">
+  <a href="index.html" class="navbar-brand d-flex align-items-center ms-2 p-0 px-lg-5">
+      <img src="img/logo/Logo_color.png" class="logo" alt="Ahmed Ghanim Logo">
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav m-5 p-4 p-lg-0">
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="about.html" class="nav-item nav-link">About</a>
+          <a href="services.html" class="nav-item nav-link">Services</a>
+          <a href="amc.html" class="nav-item nav-link">AMC</a>
+          <a href="career.html" class="nav-item nav-link">Careers</a>
+          <a href="contact.html" class="nav-item nav-link">Contact</a>
+      </div>
+  </div>
+</nav>
+<!-- Navbar End -->
 
+<!-- Single Video Slide Start -->
+<div class="container-fluid p-0">
+  <div class="position-relative video-container">
+      <video class="video-bg" autoplay muted loop>
+          <source src="img/hero-vedio.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+      <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center overlay">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-12 col-lg-8 text-center" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                      <h1 class="text-white mb-4">Adhoc Fire And Security Systems.</h1>
+                      <h2 class="fs-5 fw-medium text-white mb-0 pb-2" style="text-transform: uppercase;">At Adhoc let’s build the bridge to safety.</h2>
+                      <a href="#" class="btn btn-lg py-md-2 px-md-4 me-3 animated slideInLeft ms-3 text-white border mt-3">Read More</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Single Video Slide End -->
+
+
+  <!-- Carousel End -->
+ 
+  <!-- section starts -->
     <section id="about" class="about mt-5">
         <div class="container" data-aos="fade-up">
           <div class="row">
@@ -392,6 +421,56 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.querySelector(".navbar");
+            const toggler = document.querySelector(".navbar-toggler");
+            const logo = document.querySelector(".logo"); // Select the logo element
+            const navLinks = document.querySelectorAll(".navbar-nav .nav-link"); // Select all nav links
+    
+            // Function to update logo and navbar based on scroll position
+            function updateNavbar() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add("top-nav-collapse");
+                    logo.src = "img/logo/Logo_color.png"; // Replace with the new logo image path
+                    navbar.classList.add("scrolled"); // Add scrolled class to change nav link color
+                } else {
+                    navbar.classList.remove("top-nav-collapse");
+                    logo.src = "img/logo/Logo_white.png"; // Replace with the original logo image path
+                    navbar.classList.remove("scrolled"); // Remove scrolled class
+                }
+            }
+    
+            // Handle scroll-based changes
+            document.addEventListener("scroll", updateNavbar);
+    
+            // Call the function once on page load to set the initial state
+            updateNavbar();
+    
+            // Handle toggle-based background change
+            toggler.addEventListener("click", function () {
+                navbar.classList.toggle("collapsed");
+                navbar.classList.toggle("nav-open");
+    
+                // Change nav link color to black when the hamburger menu is open
+                if (navbar.classList.contains("nav-open")) {
+                    navLinks.forEach(link => {
+                        link.style.color = 'black'; // Set nav link color to black
+                    });
+                } else {
+                    navLinks.forEach(link => {
+                        link.style.color = ''; // Reset color when the menu is closed
+                    });
+                }
+            });
+    // Handle the collapse class toggling manually for Bootstrap
+    const collapseElement = document.querySelector(".navbar-collapse");
+    const collapse = new bootstrap.Collapse(collapseElement, {
+        toggle: false
+    });
+    toggler.addEventListener("click", function () {
+        collapse.toggle();
+    });
+});
        // Initialize AOS
  AOS.init();
     </script>
