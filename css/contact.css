@@ -27,10 +27,10 @@
 .card-body {
     padding: 40px;
 }
-
+/* transparent background */
 #contact .box,
 #contact .box .img-box{
-    background-color: transparent;
+    background-color: transparent !important;
 }
 .form-control-lg {
     border-radius: 10px;
