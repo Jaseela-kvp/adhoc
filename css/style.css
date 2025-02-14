@@ -845,6 +845,88 @@ a.link_custom:hover{
 # ends
 --------------------------------------------------------------*/
 
+.fire-safety-section {
+  background-color: #06122c;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.fire-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+ 
+  width: 100%;
+  padding: 0 20px
+}
+
+.fire-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.fire-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 0 0 50% 50%;
+}
+
+.fire-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fire-content {
+  padding: 20px;
+}
+
+.fire-content h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.fire-content p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.fire-arrow-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.fire-arrow-btn:hover {
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .fire-container {
+      grid-template-columns: repeat(4, 1fr); /* 2 columns on larger screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .fire-container {
+      grid-template-columns: repeat(1, 1fr); /* 1 column on smaller screens */
+      max-width: 400px; /* Prevents stretching too wide */
+  }
+}
+
+
+
 /*--------------------------------------------------------------
 # services
 --------------------------------------------------------------*/
@@ -854,6 +936,30 @@ a.link_custom:hover{
 
 .service-item:hover img {
     transform: scale(1.1);
+}
+.previous_next a {
+  text-decoration: none;
+  display: inline-block;
+  
+}
+
+.previous_next a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 15px 30px;
+  border-radius: 50%;
+}
+
+.next {
+  background-color: var(--primary);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50%;
 }
 /*--------------------------------------------------------------
 # ends
