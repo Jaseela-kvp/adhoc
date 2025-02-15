@@ -867,6 +867,7 @@ a.link_custom:hover{
   overflow: hidden;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
 }
 
 .fire-image {
@@ -910,7 +911,9 @@ a.link_custom:hover{
 .fire-arrow-btn:hover {
   transform: translateX(5px);
 }
-
+.fire-card:hover{
+  transform: scale(1.02);
+}
 /* Responsive Design */
 @media (min-width: 768px) {
   .fire-container {
