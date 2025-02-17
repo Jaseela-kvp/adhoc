@@ -709,19 +709,93 @@ a.link_custom:hover{
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+# certification starts
+--------------------------------------------------------------*/
+.certification-section {
+  background-color: #06122c; /* Grayish background */
+  padding: 50px 0;
+}
+
+.certification-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.certification-box {
+  background: transparent;
+  padding: 20px;
+  width: 30%;
+  color: #ffffff;
+}
+
+.certification-icon {
+  background-color: #10142c; /* Dark circular background */
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certification-icon img {
+  width: 80px;
+  height: auto;
+}
+
+.certification-box h3 {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.certification-box p {
+  font-size: 14px;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .certification-container {
+      flex-direction: column;
+      gap: 20px;
+  }
+  .certification-box {
+      width: 90%;
+      margin: auto;
+  }
+}
+
+/*--------------------------------------------------------------
+# ends
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
 # icon box starts
 --------------------------------------------------------------*/
+.container_icon .row {
+  display: flex;
+  align-items: flex-start; /* Aligns all items at the top */
+}
+
 .container_icon .row > div {
   display: flex;
   flex-direction: column;
   align-items: center; /* Centers items horizontally */
-  text-align: start;
+  text-align: center;
+  min-height: 100%; /* Ensures equal height */
 }
 
 .container_icon img {
   width: 150px; 
   height: auto;
   margin-bottom: 10px;
+  align-self: center; /* Ensures all images align at the same level */
 }
 
 .container_icon h5 {
@@ -731,7 +805,9 @@ a.link_custom:hover{
 
 .container_icon p {
   flex-grow: 1; /* Ensures all items stretch to the same height */
+  text-align: center;
 }
+
 
 /*--------------------------------------------------------------
 # ends
