@@ -543,7 +543,6 @@ a.link_custom:hover{
   min-width: 95px;
   height: 95px;
   margin-right: 25px;
-  background-color: #fff;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -712,41 +711,28 @@ a.link_custom:hover{
 /*--------------------------------------------------------------
 # icon box starts
 --------------------------------------------------------------*/
-  .container_icon{
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
-
-  .container_icon .grid-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); 
-    gap: 1rem; 
-}
-
-@media (max-width: 768px) {
-    .container_icon .grid-container {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-    .container_icon{
-        margin-left: 90px;
-    }
-}
-
-@media (min-width: 768px) {
-    .container_icon .grid-container {
-        grid-template-columns: repeat(4, 1fr); 
-    }
-}
-
-.container_icon .grid-container div {
-    text-align: center;
+.container_icon .row > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers items horizontally */
+  text-align: start;
 }
 
 .container_icon img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 0.5rem;
+  width: 150px; 
+  height: auto;
+  margin-bottom: 10px;
 }
+
+.container_icon h5 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.container_icon p {
+  flex-grow: 1; /* Ensures all items stretch to the same height */
+}
+
 /*--------------------------------------------------------------
 # ends
 --------------------------------------------------------------*/
@@ -810,7 +796,7 @@ a.link_custom:hover{
 .box_1{
   background: 
   linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-  url('../img/box4_bg.jpeg');
+  url('../img/box2_bg.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -818,7 +804,7 @@ a.link_custom:hover{
 .box_2{
   background: 
   linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-  url('../img/box2_bg.jpeg');
+  url('../img/box3_bg.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
