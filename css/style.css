@@ -172,14 +172,12 @@ a.link_custom:hover{
     width: 100%;
   }
 
-/* Add a new rule for nav links when navbar is scrolled */
 .navbar.scrolled .navbar-nav .nav-link {
-    color: black; /* Change nav link color to black when scrolled */
+    color: black; 
   }
 
-/* Retain the hover effect for nav links when scrolled */
 .navbar.scrolled .navbar-nav .nav-link:hover {
-    color: var(--primary); /* Hover effect for scrolled state */
+    color: var(--primary); 
   }
 
 .navbar-light .navbar-brand,
@@ -211,7 +209,7 @@ a.link_custom:hover{
   }
 
 .navbar-toggler {
-    display: block; /* Ensure it's visible */
+    display: block; 
   }
 
 .navbar-toggler-icon {
@@ -244,7 +242,7 @@ a.link_custom:hover{
       }
     
     .navbar-collapse .navbar-nav .nav-link::after {
-        bottom: 15px; /* Move the underline closer to the text */
+        bottom: 15px; 
       }
 
     }
@@ -268,7 +266,7 @@ a.link_custom:hover{
         border-top: 1px solid #EEEEEE;
       }
     .navbar-collapse .navbar-nav .nav-link::after {
-       bottom:0; /* Remove the underline effect in mobile view */
+       bottom:0; 
       }
     }
 
@@ -302,64 +300,35 @@ a.link_custom:hover{
     display: flex;
     justify-content: space-between;
   }
-  .header-carousel .owl-nav .owl-prev,
-  .header-carousel .owl-nav .owl-next {
-      width: 45px;
-      height: 45px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #FFFFFF;
-      background: transparent;
-      border: 1px solid #FFFFFF;
-      font-size: 22px;
-      transition: .5s;
-  }
-  
-  .header-carousel .owl-nav .owl-prev:hover,
-  .header-carousel .owl-nav .owl-next:hover {
-      background: var(--primary);
-      border-color: var(--primary);
-  }
-  
+
   .header-carousel .owl-dots {
-      position: absolute;
-      height: 45px;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-  
-  .header-carousel .owl-dot {
-      position: relative;
-      display: inline-block;
-      margin: 0 5px;
-      width: 15px;
-      height: 15px;
-      background: transparent;
-      border: 1px solid #FFFFFF;
-      transition: .5s;
-  }
-  
-  .header-carousel .owl-dot::after {
-      position: absolute;
-      content: "";
-      width: 5px;
-      height: 5px;
-      top: 4px;
-      left: 4px;
-      background: transparent;
-      border: 1px solid #FFFFFF;
-  }
-  
-  .header-carousel .owl-dot.active {
-      background: var(--primary);
-      border-color: var(--primary);
-  }
-  
+    position: absolute;
+    height: 45px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Default Dots - White Horizontal Bars */
+.header-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 60px;  
+    height: 5px;  
+    background: white; 
+    transition: .5s;
+    border: none; 
+    border-radius: 3px; 
+}
+
+.header-carousel .owl-dot.active {
+    background: var(--primary); 
+}
+ 
 .page-header {
       background: linear-gradient(rgba(53, 53, 53, .7), rgba(53, 53, 53, .7)), url(../img/carousel-1.jpg) center center no-repeat;
       background-size: cover;
@@ -371,7 +340,7 @@ a.link_custom:hover{
 
 
   
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
@@ -478,32 +447,6 @@ a.link_custom:hover{
     margin-bottom: 0;
   }
 
-/* .custom_font{
-    font-size: 2.5ch;
-    white-space: pre-wrap; 
-    
-}
-@media (min-width: 992px) {
-    .container.about {
-        max-width: 100% !important;
-    }
-
-    .about-text  {
-        padding-right: calc(((100% - 960px) / 2) + .75rem);
-    }
-}
-
-@media (min-width: 1200px) {
-    .about-text  {
-        padding-right: calc(((100% - 1140px) / 2) + .75rem);
-    }
-}
-
-@media (min-width: 1400px) {
-    .about-text  {
-        padding-right: calc(((100% - 1320px) / 2) + .75rem);
-    }
-} */
 
 /*--------------------------------------------------------------
 # ends
@@ -527,7 +470,7 @@ a.link_custom:hover{
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  min-height: 150px; /* Ensure uniform box height */
+  min-height: 150px; 
 }
 
 .service_section .box:hover {
@@ -733,7 +676,7 @@ a.link_custom:hover{
 }
 
 .certification-icon {
-  background-color: #10142c; /* Dark circular background */
+  background-color: #10142c; 
   width: 80px;
   height: 80px;
   margin: 0 auto 15px;
@@ -780,22 +723,22 @@ a.link_custom:hover{
 --------------------------------------------------------------*/
 .container_icon .row {
   display: flex;
-  align-items: flex-start; /* Aligns all items at the top */
+  align-items: flex-start; 
 }
 
 .container_icon .row > div {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers items horizontally */
+  align-items: center; 
   text-align: center;
-  min-height: 100%; /* Ensures equal height */
+  min-height: 100%; 
 }
 
 .container_icon img {
   width: 150px; 
   height: auto;
   margin-bottom: 10px;
-  align-self: center; /* Ensures all images align at the same level */
+  align-self: center; 
 }
 
 .container_icon h5 {
@@ -804,7 +747,7 @@ a.link_custom:hover{
 }
 
 .container_icon p {
-  flex-grow: 1; /* Ensures all items stretch to the same height */
+  flex-grow: 1;
   text-align: center;
 }
 
@@ -979,14 +922,14 @@ a.link_custom:hover{
 /* Responsive Design */
 @media (min-width: 768px) {
   .fire-container {
-      grid-template-columns: repeat(4, 1fr); /* 2 columns on larger screens */
+      grid-template-columns: repeat(4, 1fr); 
   }
 }
 
 @media (max-width: 767px) {
   .fire-container {
-      grid-template-columns: repeat(1, 1fr); /* 1 column on smaller screens */
-      max-width: 400px; /* Prevents stretching too wide */
+      grid-template-columns: repeat(1, 1fr); 
+      max-width: 400px; 
   }
 }
 
@@ -1092,7 +1035,7 @@ a.link_custom:hover{
     padding: 0;
     text-align: left;
     color: #FFFFFF;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: normal;
     text-transform: capitalize;
     transition: .3s;
@@ -1349,12 +1292,12 @@ ends
 --------------------------------------------------------------*/
 .column_custom{
   display: flex;
-  justify-content: center; /* Horizontally center the image */
-  align-items: center; /* Vertically center the image */
+  justify-content: center; 
+  align-items: center; 
 }
 .row {
   display: flex;
-  align-items: center; /* Vertically center all columns in a row */
+  align-items: center; 
 }
 
 /*--------------------------------------------------------------
@@ -1364,17 +1307,17 @@ ends
 /*--------------------------------------------------------------
 # emergency evacuation styling
 --------------------------------------------------------------*/
-/* Scoped Styling for Service Cards */
+
 .card {
   display: block;
-  margin: 20px auto; /* Center the card */
+  margin: 20px auto;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 500px; /* Larger card width */
-  position: relative; /* Ensure proper layering */
+  max-width: 500px; 
+  position: relative; 
 }
 
 .card-container img {
@@ -1387,17 +1330,17 @@ ends
   margin: 0;
   padding: 20px;
   background-color: #f8f9fa;
-  font-size: 24px; /* Larger heading size */
+  font-size: 24px; 
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
   color: #333;
-  position: relative; /* Ensure heading stays above overlay */
+  position: relative; 
   z-index: 2;
 }
 
 .card:hover {
-  transform: translateY(-10px); /* Slightly more noticeable lift */
+  transform: translateY(-10px); 
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -1409,18 +1352,16 @@ ends
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(104,27,27); /* Red overlay with opacity */
-  z-index: 1; /* Overlay behind the text */
+  background-color: rgb(104,27,27); 
+  z-index: 1; 
   transition: opacity 0.3s ease;
 }
 
-/* Ensure text inside the card is visible on hover */
 .card:hover .card-title,
 .card:hover .card-body {
-  color: #fff; /* Change text to white on hover */
+  color: #fff;
 }
 
-/* Text Styling */
 .card .card-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -1432,16 +1373,16 @@ ends
   line-height: 1.8;
   transition: color 0.3s ease;
   position: relative;
-  z-index: 2; /* Ensure the body text is above the overlay */
+  z-index: 2; 
 }
 
 .card .card-text {
-  list-style-type: disc; /* Add bullet points */
-  margin-left: 20px; /* Indentation for list items */
+  list-style-type: disc; 
+  margin-left: 20px; 
 }
 
 .card:hover .card-text li {
-  color: #fff; /* Change list items to white on hover */
+  color: #fff; 
 }
 
 .card .card-text li {
@@ -1507,7 +1448,7 @@ ends
 }
 .hassantuk-section div {
   flex: 1;
-  max-width: 250px; /* Limit the width of each card */
+  max-width: 250px; 
   text-align: center;
 }
 .hassantuk-section img {
@@ -1525,14 +1466,14 @@ ends
   font-size: 0.9em;
   color: #666;
 }
-/* Media query for mobile view */
+
 @media (max-width: 768px) {
   .hassantuk-section {
-    flex-direction: column; /* Stack the images vertically */
-    gap: 20px; /* Adjust the gap for mobile */
+    flex-direction: column; 
+    gap: 20px; 
   }
 
   .hassantuk-section div {
-    max-width: 100%; /* Allow the divs to take full width on mobile */
+    max-width: 100%;
   }
 }
